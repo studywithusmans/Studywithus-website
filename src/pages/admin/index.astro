@@ -47,8 +47,8 @@ const posts = (await getCollection("blog")).sort(
               </ul>
             </div>
             <div class="post-actions">
-              <a href={`/admin/edit/${post.slug}/`} class="edit-link">Edit</a>
-              <a href={`/admin/delete/${post.slug}/`} class="delete-link">Delete</a>
+              <a href={`/admin/edit-post/${post.slug}/`} class="edit-link">Edit</a>
+              <a href={`/admin/delete-post/${post.slug}/`} class="delete-link">Delete</a>
             </div>
           </li>
         );
