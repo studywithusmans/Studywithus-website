@@ -15,20 +15,28 @@ export const POST: APIRoute = async ({ request, redirect, cookies }) => {
     return new Response("Email and password are required.", { status: 400 });
   }
 
-  /* Authenticate user */
+  /* Authenticate user and get UID */
+  let uid: string;
   try {
-    const { user } = await auth.getUserByEmail(email);
-    // This is a simplified check. In a real app, you'd verify the password.
-    // For this example, we'll just check if the user exists.
+    // In a real app, you would verify the password. This is NOT secure.
+    // We are only checking if the user exists and getting their UID.
+    const userRecord = await auth.getUserByEmail(email);
+    uid = userRecord.uid;
   } catch (error) {
+    console.error("Error fetching user:", error);
     return new Response("Invalid credentials.", { status: 401 });
   }
 
-  /* Create and set session cookie */
-  const sessionCookie = await auth.createSessionCookie(email, { expiresIn: 60 * 60 * 24 * 5 * 1000 });
-  cookies.set("session", sessionCookie, {
-    path: "/",
-  });
+  try {
+    /* Create and set session cookie */
+    const sessionCookie = await auth.createSessionCookie(uid, { expiresIn: 60 * 60 * 24 * 5 * 1000 });
+    cookies.set("session", sessionCookie, {
+      path: "/",
+    });
+  } catch (error) {
+    console.error("Error creating session cookie:", error);
+    return new Response("Failed to create session.", { status: 500 });
+  }
 
   /* Redirect to admin dashboard */
   return redirect("/admin");
