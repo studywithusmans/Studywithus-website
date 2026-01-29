@@ -1,0 +1,75 @@
+---
+export const prerender = false;
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const { slug } = Astro.params;
+const posts = await getCollection('blog');
+const post = posts.find(p => p.data.slug === slug);
+
+if (!post) {
+  return new Response(null, { status: 404 });
+}
+---
+
+<BaseLayout title={`Confirm Deletion: ${post.data.title}`}>
+  <main class="bg-gray-50 dark:bg-gray-900">
+    <section class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+      <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center">Confirm Deletion</h2>
+      <p class="mb-6 text-center text-gray-500 dark:text-gray-400">Are you sure you want to delete the post "{post.data.title}"? This action cannot be undone.</p>
+      <form id="delete-post-form" data-slug={post.data.slug}>
+        <div id="form-message" class="mt-4 text-center font-medium"></div>
+        <div class="flex items-center justify-center space-x-4 mt-6">
+          <button type="submit" id="submit-btn" class="text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-900">Yes, Delete</button>
+          <a href="/admin" class="text-gray-600 inline-flex items-center hover:text-white border border-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-gray-500 dark:text-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-900">Cancel</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  #form-message.success { color: #16a34a; }
+  #form-message.error { color: #dc2626; }
+</style>
+
+<script>
+  const form = document.getElementById('delete-post-form');
+  const messageDiv = document.getElementById('form-message');
+  const submitButton = document.getElementById('submit-btn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitButton.disabled = true;
+    submitButton.textContent = 'Deleting...';
+    messageDiv.textContent = '';
+
+    const slug = form.dataset.slug;
+
+    try {
+      const response = await fetch(`/api/delete-post?slug=${slug}`, {
+        method: 'POST',
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        messageDiv.textContent = 'Post deleted successfully! Redirecting...';
+        messageDiv.className = 'success';
+        
+        setTimeout(() => {
+          window.location.href = '/admin';
+        }, 2000);
+
+      } else {
+        throw new Error(result.message || 'An unknown error occurred.');
+      }
+
+    } catch (error) {
+      messageDiv.textContent = `Error: ${error.message}`;
+      messageDiv.className = 'error';
+      submitButton.disabled = false;
+      submitButton.textContent = 'Yes, Delete';
+    }
+  });
+</script>

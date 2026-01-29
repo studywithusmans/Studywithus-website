@@ -1,0 +1,145 @@
+--- 
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Add New Post">
+  <main class="bg-gray-50 dark:bg-gray-900">
+    <section class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+      <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center">Add a new blog post</h2>
+      <form id="add-post-form">
+        <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+          <div class="sm:col-span-2">
+            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Post Title</label>
+            <input type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter the blog title" required>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="author" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Author Name</label>
+            <input type="text" name="author" id="author" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter the author\'s name" required>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Meta Description (for SEO)</label>
+            <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter a brief summary for search engines"></textarea>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="heroImage" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Hero Image URL</label>
+            <input type="text" name="heroImage" id="heroImage" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="e.g., /blog-placeholder-3.jpg">
+            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Enter the URL or path to the image. Leave blank for default.</p>
+        </div>
+        <div class="sm:col-span-2">
+            <label for="heroImageAlt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Hero Image Alt Text</label>
+            <input type="text" name="heroImageAlt" id="heroImageAlt" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Describe the image for accessibility" required>
+        </div>
+          <div class="sm:col-span-2">
+            <div class="flex justify-between items-center mb-2">
+              <label for="content" class="text-sm font-medium text-gray-900 dark:text-white">Main Content (Markdown supported)</label>
+              <div>
+                <button type="button" id="add-faq-btn" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500 mr-4">Add FAQ</button>
+                <button type="button" id="generate-toc-btn" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Generate TOC</button>
+              </div>
+            </div>
+            <textarea id="content" name="content" rows="10" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write your blog post content here..."></textarea>
+          </div>
+        </div>
+        <div id="form-message" class="mt-4 text-center font-medium"></div>
+        <div class="flex items-center space-x-4 mt-6">
+          <button type="submit" id="submit-btn" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Save Post
+          </button>
+          <a href="/admin" class="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+            Cancel
+          </a>
+        </div>
+      </form>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+    #form-message.success {
+      color: #16a34a; /* green-600 */
+  }
+  #form-message.error {
+      color: #dc2626; /* red-600 */
+  }
+</style>
+
+<script>
+  const form = document.getElementById('add-post-form');
+  const messageDiv = document.getElementById('form-message');
+  const submitButton = document.getElementById('submit-btn');
+  const addFaqBtn = document.getElementById('add-faq-btn');
+  const generateTocBtn = document.getElementById('generate-toc-btn');
+  const contentArea = document.getElementById('content');
+
+  addFaqBtn.addEventListener('click', () => {
+    const faqTemplate = `
+**Q: Enter your question here?**
+**Ans:** Enter your answer here.
+`;
+    contentArea.value += faqTemplate;
+  });
+
+  generateTocBtn.addEventListener('click', () => {
+    const content = contentArea.value;
+    const tocHeader = '## Table of Contents\n';
+    const headings = content.match(/^#{2,3}\s.*$/gm) || [];
+    
+    if (headings.length === 0) {
+        alert('No headings (## or ###) found to generate a Table of Contents.');
+        return;
+    }
+
+    const tocList = headings.map(heading => {
+        const level = heading.startsWith('###') ? 2 : 1;
+        const text = heading.replace(/^#{2,3}\s/, '').trim();
+        const slug = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+        return `${'  '.repeat(level - 1)}- [${text}](#${slug})`;
+    }).join('\n');
+
+    const tocMarkdown = `${tocHeader}${tocList}\n\n`;
+
+    if (content.includes(tocHeader)) {
+        // Replace existing TOC
+        contentArea.value = content.replace(/^## Table of Contents\n[\s\S]*?\n\n/, tocMarkdown);
+    } else {
+        // Add new TOC to the top
+        contentArea.value = tocMarkdown + content;
+    }
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitButton.disabled = true;
+    submitButton.textContent = 'Saving...';
+    messageDiv.textContent = '';
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/api/create-post', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        messageDiv.textContent = 'Post created successfully! Redirecting...';
+        messageDiv.className = 'success';
+        
+        setTimeout(() => {
+          window.location.href = '/admin';
+        }, 2000);
+
+      } else {
+        throw new Error(result.message || 'An unknown error occurred.');
+      }
+
+    } catch (error) {
+      messageDiv.textContent = `Error: ${error.message}`;
+      messageDiv.className = 'error';
+      submitButton.disabled = false;
+      submitButton.textContent = 'Save Post';
+    }
+  });
+</script>

@@ -1,17 +1,30 @@
 ---
 interface Props {
-	date: Date;
+	date: Date | string | undefined | null;
 }
 
 const { date } = Astro.props;
+
+let dateObject: Date | undefined;
+
+// Only try to create a date if the prop exists
+if (date) {
+  dateObject = new Date(date);
+  // Check if the created date is valid. If not, don't render anything.
+  if (isNaN(dateObject.getTime())) {
+    dateObject = undefined;
+  }
+}
 ---
 
-<time datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
-	}
-</time>
+{dateObject && (
+  <time datetime={dateObject.toISOString()}>
+    {
+      dateObject.toLocaleDateString('en-us', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      })
+    }
+  </time>
+)}

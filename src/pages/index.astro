@@ -1,49 +1,179 @@
+
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Carousel from "../components/Carousel.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 3);
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseLayout>
+  <div class="hero-viewport">
+    <div class="welcome-section">
+      <h1>Welcome to StudyWithUs</h1>
+      <p>Daily syllabus track karo, smart planning ke saath — bina stress, better results</p>
+    </div>
+
+    <div class="hero-container">
+      <Carousel />
+    </div>
+
+    <div class="button-container">
+      <a href="/our-mission" class="btn">Start Tracking Free</a>
+      <a href="/our-mission" class="btn btn-secondary">Explore Content</a>
+    </div>
+  </div>
+
+  <div class="latest-posts">
+    <h2>Latest Posts</h2>
+    <ul>
+      {posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.slug}/`}>
+            <img src={post.data.heroImage} alt={post.data.title} />
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero-viewport {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* 80px is an estimate for the header height */
+    text-align: center;
+  }
+
+  .welcome-section {
+    margin-bottom: 1rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #121212;
+  }
+
+  .welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #4A5568;
+  }
+
+  .hero-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: rgb(var(--accent));
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+  }
+
+  .btn:hover {
+    background-color: rgb(var(--accent-dark));
+  }
+
+  .btn.btn-secondary {
+    background-color: transparent;
+    color: rgb(var(--accent));
+    border-color: rgb(var(--accent));
+  }
+
+  .btn.btn-secondary:hover {
+    background-color: rgba(var(--accent), 0.1);
+    color: rgb(var(--accent-dark));
+    border-color: rgb(var(--accent-dark));
+  }
+
+  .btn.disabled {
+    background-color: #A0AEC0; /* Muted gray */
+    color: #E2E8F0;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: #A0AEC0;
+  }
+
+  .btn.disabled:hover {
+      background-color: #A0AEC0;
+      color: #E2E8F0;
+  }
+
+  .latest-posts {
+    padding: 2rem 0;
+  }
+
+  .latest-posts h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #121212;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  li {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  li:hover {
+    transform: translateY(-5px);
+  }
+
+  li a {
+    text-decoration: none;
+    color: #121212;
+  }
+
+  li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  li h3 {
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+
+  li p {
+    padding: 0 1rem 1rem;
+    color: #4A5568;
+  }
+</style>

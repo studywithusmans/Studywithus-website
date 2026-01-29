@@ -1,0 +1,345 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+---
+
+<BaseLayout siteTitle={SITE_TITLE} siteDescription={SITE_DESCRIPTION}>
+  <main class="bg-gray-900 text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-6">Create New Post</h1>
+      <div id="seo-score" class="mb-4 text-lg font-bold"></div>
+      <form id="create-post-form">
+        <div class="mb-4">
+          <label for="title" class="block text-sm font-medium">Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            class="mt-1 block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Enter post title (50–70 characters recommended)"
+            required
+            minlength="10"
+            maxlength="120"
+          />
+          <p class="mt-2 text-sm text-gray-400">
+            Write a concise, keyword-rich title. Avoid clickbait. <br />
+            Example: Top 10 SSC Preparation Tips for 2026 — Complete Guide
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <label for="slug" class="block text-sm font-medium">Slug</label>
+          <input
+            type="text"
+            id="slug"
+            name="slug"
+            class="mt-1 block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            required
+            maxlength="120"
+          />
+          <p class="mt-2 text-sm text-gray-400">
+            URL-friendly. Only letters, numbers, hyphens.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <label for="imageUrl" class="block text-sm font-medium"
+            >Featured Image</label
+          >
+          <input
+            type="file"
+            id="imageUrl"
+            name="imageUrl"
+            accept="image/jpeg, image/png, image/webp"
+            class="mt-1"
+            required
+          />
+          <div id="image-preview" class="mt-2"></div>
+          <p class="mt-2 text-sm text-gray-400">
+            Max file size 2 MB, recommended 1200×628 px (16:9).
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <label for="imageAlt" class="block text-sm font-medium"
+            >Image Alt Text</label
+          >
+          <input
+            type="text"
+            id="imageAlt"
+            name="imageAlt"
+            class="mt-1 block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Describe the image for accessibility"
+            required
+            maxlength="125"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="metaDescription" class="block text-sm font-medium"
+            >Meta Description</label
+          >
+          <textarea
+            id="metaDescription"
+            name="metaDescription"
+            rows="3"
+            class="mt-1 block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Write a concise summary that includes the focus keyword."
+            required
+            minlength="50"
+            maxlength="160"
+          ></textarea>
+          <p class="mt-2 text-sm text-gray-400">
+            <span id="meta-char-count">0</span>/160 characters.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <label for="content" class="block text-sm font-medium">Content</label>
+          <textarea
+            id="content"
+            name="content"
+            rows="10"
+            class="mt-1 block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="Write your post content here (min 400 words for long-form)."
+            required
+          ></textarea>
+          <p class="mt-2 text-sm text-gray-400">
+            Word count: <span id="word-count">0</span>
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <label for="category" class="block text-sm font-medium"
+            >Category</label
+          >
+          <select
+            id="category"
+            name="category"
+            class="mt-1 block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            required
+          >
+            <option value="">Select a category</option>
+            <option value="Technology">Technology</option>
+            <option value="Education">Education</option>
+            <option value="Lifestyle">Lifestyle</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label for="tags" class="block text-sm font-medium">Tags</label>
+          <input
+            type="text"
+            id="tags"
+            name="tags"
+            class="mt-1 block w-full bg-gray-800 border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            placeholder="e.g., ssc, cgl, preparation"
+          />
+          <p class="mt-2 text-sm text-gray-400">
+            3–10 tags recommended — include topic + subtopics
+          </p>
+        </div>
+
+        <div class="flex items-center justify-end space-x-4">
+          <button
+            type="button"
+            id="cancel-btn"
+            class="px-4 py-2 bg-gray-600 rounded-md hover:bg-gray-700">Cancel</button
+          >
+          <button
+            type="button"
+            id="draft-btn"
+            class="px-4 py-2 bg-blue-600 rounded-md hover:bg-blue-700"
+            >Save Draft</button
+          >
+          <button
+            type="button"
+            id="preview-btn"
+            class="px-4 py-2 bg-purple-600 rounded-md hover:bg-purple-700"
+            >Preview</button
+          >
+          <button
+            type="button"
+            id="analyze-btn"
+            class="px-4 py-2 bg-yellow-600 rounded-md hover:bg-yellow-700"
+            >Analyze SEO</button
+          >
+          <button
+            type="submit"
+            id="publish-btn"
+            class="px-4 py-2 bg-green-600 rounded-md hover:bg-green-700"
+            >Publish</button
+          >
+        </div>
+      </form>
+
+      <div id="seo-suggestions" class="mt-8"></div>
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("create-post-form");
+    const titleInput = document.getElementById("title");
+    const slugInput = document.getElementById("slug");
+    const metaDescriptionInput = document.getElementById("metaDescription");
+    const metaCharCount = document.getElementById("meta-char-count");
+    const contentInput = document.getElementById("content");
+    const wordCount = document.getElementById("word-count");
+    const imageUrlInput = document.getElementById("imageUrl");
+    const imagePreview = document.getElementById("image-preview");
+
+    const seoScoreEl = document.getElementById("seo-score");
+    const seoSuggestionsEl = document.getElementById("seo-suggestions");
+    
+    const analyzeBtn = document.getElementById("analyze-btn");
+    const publishBtn = document.getElementById("publish-btn");
+    const cancelBtn = document.getElementById("cancel-btn");
+
+    // Auto-generate slug from title
+    titleInput.addEventListener("input", () => {
+      const title = titleInput.value;
+      slugInput.value = title
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .slice(0, 120);
+    });
+
+    // Meta description character count
+    metaDescriptionInput.addEventListener("input", () => {
+      metaCharCount.textContent = metaDescriptionInput.value.length;
+    });
+
+    // Content word count
+    contentInput.addEventListener("input", () => {
+      const words = contentInput.value.trim().split(/\s+/).filter(Boolean);
+      wordCount.textContent = words.length;
+    });
+
+    // Image preview
+    imageUrlInput.addEventListener("change", () => {
+      const file = imageUrlInput.files[0];
+      if (file) {
+        if (file.size > 2 * 1024 * 1024) {
+            alert("File size exceeds 2 MB.");
+            imageUrlInput.value = "";
+            return;
+        }
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          imagePreview.innerHTML = `<img src="${e.target.result}" class="max-h-48 rounded-md" />`;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // SEO Analysis
+    const analyzeSeo = () => {
+        let score = 100;
+        const suggestions = [];
+        
+        const title = titleInput.value;
+        const meta = metaDescriptionInput.value;
+        const content = contentInput.value;
+        const imageAlt = document.getElementById("imageAlt").value;
+
+        // Title length
+        if (title.length < 50 || title.length > 70) {
+            score -= 15;
+            suggestions.push("Title length should be between 50-70 characters.");
+        }
+        
+        // Meta description length
+        if (meta.length < 50 || meta.length > 160) {
+            score -= 15;
+            suggestions.push("Meta description should be between 50-160 characters.");
+        }
+
+        // Word count
+        const words = content.trim().split(/\s+/).filter(Boolean).length;
+        if (words < 400) {
+            score -= 20;
+            suggestions.push(`Content is too short (${words} words). Aim for at least 400 words.`);
+        }
+
+        // Image alt text
+        if (!imageAlt) {
+            score -= 20;
+            suggestions.push("Image alt text is missing.");
+        }
+
+        // Display score
+        let scoreColor = "text-green-500";
+        if (score < 60) scoreColor = "text-red-500";
+        else if (score < 80) scoreColor = "text-yellow-500";
+        seoScoreEl.innerHTML = `SEO Score: <span class="${scoreColor}">${score}</span>`;
+
+        // Display suggestions
+        seoSuggestionsEl.innerHTML = "<h3>SEO Suggestions:</h3>";
+        if (suggestions.length > 0) {
+            const ul = document.createElement("ul");
+            ul.className = "list-disc list-inside";
+            suggestions.forEach(s => {
+                const li = document.createElement("li");
+                li.textContent = s;
+                ul.appendChild(li);
+            });
+            seoSuggestionsEl.appendChild(ul);
+        } else {
+            seoSuggestionsEl.innerHTML += "<p>Looks great!</p>";
+        }
+
+        return { score, suggestions };
+    };
+    
+    analyzeBtn.addEventListener("click", analyzeSeo);
+
+    // Form submission
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      
+      const { score, suggestions } = analyzeSeo();
+
+      if (score < 60) {
+        const confirmation = prompt(`SEO score is ${score}. This is poor. To publish anyway, please type "I UNDERSTAND"\n\nIssues:\n- ${suggestions.join("\n- ")}`);
+        if (confirmation !== "I UNDERSTAND") {
+            alert("Publishing cancelled.");
+            return;
+        }
+      }
+
+      const formData = new FormData(form);
+      
+      // We will create the API endpoint in the next step
+      // For now, we will log the data to the console
+      console.log("Form data:", Object.fromEntries(formData.entries()));
+
+      try {
+        const response = await fetch("/api/advanced-create-post", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          alert("Post published successfully!");
+          window.location.href = "/admin";
+        } else {
+          const error = await response.text();
+          alert("Error publishing post: " + error);
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        alert("An unexpected error occurred.");
+      }
+    });
+
+    cancelBtn.addEventListener("click", () => {
+        if(confirm("Are you sure you want to cancel? Any unsaved changes will be lost.")) {
+            window.location.href = "/admin";
+        }
+    });
+
+  });
+</script>

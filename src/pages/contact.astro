@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Contact Us | StudyWithUs">
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <p class="subtitle">We'd love to hear from you. Whether you have a question, feedback, or a partnership inquiry, please don't hesitate to reach out.</p>
+    
+    <div class="contact-info">
+      <h2>Our Email</h2>
+      <p>For all inquiries, please email us at:</p>
+      <a href="mailto:contact@studywithus.com" class="email-link">contact@studywithus.com</a>
+      <p>We aim to respond to all emails within 48 business hours.</p>
+    </div>
+
+    <div class="contact-info">
+      <h2>Feedback & Suggestions</h2>
+      <p>Your feedback is invaluable to us. If you have any suggestions on how we can improve our content or platform, we are all ears!</p>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #121212;
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #4A5568;
+  margin-bottom: 3rem;
+}
+.contact-info {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: 5px solid rgb(var(--accent));
+  text-align: left;
+}
+.contact-info h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #121212;
+  margin-bottom: 1rem;
+}
+.contact-info p {
+  font-size: 1.1rem;
+  color: #4A5568;
+  line-height: 1.7;
+}
+.email-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(var(--accent-dark));
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.email-link:hover {
+  text-decoration: underline;
+  color: #121212;
+}
+</style>
