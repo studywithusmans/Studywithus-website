@@ -36,12 +36,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         authDomain: import.meta.env.public_firebase_auth_domain,
         projectId: import.meta.env.public_firebase_project_id,
         storageBucket: import.meta.env.public_firebase_storage_bucket,
-        messagingSenderId: import.meta.env.public_firebase_messaging_sender_id,
+        messagingSenderId: import.meta.env.public_fb_messaging_id, // <--- CORRECTED NAME
         appId: import.meta.env.public_firebase_app_id,
       };
 
-      if (!firebaseConfig.apiKey) {
-        throw new Error("Firebase config is missing. Please set public_firebase... variables in your environment.");
+      if (!firebaseConfig.apiKey || !firebaseConfig.messagingSenderId) {
+        throw new Error("Firebase config is missing. Please check your environment variables.");
       }
 
       const app = initializeApp(firebaseConfig);
