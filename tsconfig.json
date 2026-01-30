@@ -5,6 +5,10 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@firebase/*": ["src/firebase/*"]
+    }
   }
 }
