@@ -1,35 +1,36 @@
-This is a blueprint for a web application built with Astro.js and Firebase. The application is designed to be a content-focused website with a server-first approach, leveraging Astro's Islands Architecture for optimal performance.
+# Astro.js Project Blueprint
 
-## Project Overview
+## Overview
 
-*   **Framework:** Astro.js
-*   **Deployment:** Firebase App Hosting
-*   **Authentication:** Firebase Authentication
-*   **Database:** Cloud Firestore
+This project is a static-first web application built with Astro.js. It's designed for the Firebase Studio environment and focuses on performance, SEO, and the seamless integration of UI frameworks. The goal is to create a fast, scalable site with minimal JavaScript by default, ensuring a great user experience and top-tier Core Web Vitals.
 
 ## Implemented Features
 
-*   **Admin Panel:** A secure admin panel for managing site content.
-    *   **Login:** An email/password-based login system for administrators.
-    *   **Session Management:** Secure session management using HTTP-only cookies.
-*   **Firebase Integration:**
-    *   **Client-Side:** The Firebase client SDK is initialized and used for front-end interactions.
-    *   **Server-Side:** The Firebase Admin SDK is initialized for backend operations.
+### Initial Setup
 
-## Design and Styling
+- **Astro.js Project:** A basic Astro.js project has been created.
+- **File-Based Routing:** The project uses Astro's file-based routing in the `src/pages/` directory.
+- **Server-Side Rendering (SSR):** The project is configured for SSR with a Node.js adapter, enabling dynamic content and API routes.
+- **Content Collections:** Astro's content collections are set up for managing blog posts, drafts, and scheduled content.
+- **API Routes:** The project includes API routes for handling form submissions and other server-side logic.
 
-*   **Layout:** A base layout (`BaseLayout.astro`) provides a consistent structure for all pages.
-*   **Styling:** The application uses a clean and modern design with a focus on user experience.
+### Styling
 
-## Current Plan
+- **Tailwind CSS:** The project uses Tailwind CSS for utility-first styling.
 
-The current plan is to finalize the Firebase authentication flow and resolve any deployment issues.
+### Deployment
 
-### Steps:
+- **Firebase Integration:** The project is configured for deployment to Firebase.
 
-1.  **Create `.env` file:** Create a `.env` file to store Firebase project credentials.
-2.  **Create `src/firebase/client.ts`:** Create a file to initialize the Firebase client SDK.
-3.  **Update `src/pages/admin/login.astro`:** Update the admin login page to use the shared Firebase client instance.
-4.  **Create `src/pages/api/auth/login.ts`:** Create a server-side API endpoint to handle login requests.
-5.  **Create `firebase/server.ts`:** Create a file to initialize the Firebase Admin SDK on the server.
-6.  **Commit and Push:** Commit all changes to the GitHub repository.
+## Current Task: Fix Deployment Issues
+
+### Plan
+
+1.  **Diagnose the Build Failure:** The initial deployment failed. I will investigate the build logs to identify the root cause.
+2.  **Fix the Build Error:** The build failed due to a syntax error in an API route. I will fix the syntax error.
+3.  **Attempt Deployment Again:** After fixing the build, I will try deploying the application again.
+4.  **Resolve Image Path Issue:** The build failed again due to an image path issue. I will try to fix the image path.
+5.  **Use a Remote Image:** As a more robust solution, I will use a remote placeholder image to avoid any issues with local asset paths during the build process.
+6.  **Verify the Build:** I will run the build command locally to ensure all issues are resolved.
+7.  **Final Deployment:** Once the build is successful, I will attempt to deploy the application one last time.
+

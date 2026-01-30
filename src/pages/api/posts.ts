@@ -1,4 +1,4 @@
-'''
+
 import type { APIRoute } from "astro";
 import { getFirestore } from "firebase-admin/firestore";
 import { app } from "../../../firebase/server";
@@ -8,8 +8,7 @@ const db = getFirestore(app);
 // Helper function to create the markdown content
 const createMarkdownContent = (data: Record<string, any>) => {
     const { title, slug, description, author, pubDate, heroImage, content, status, tableOfContents } = data;
-    const heroImages = heroImage ? heroImage.split('
-').filter(url => url.trim() !== '') : [];
+    const heroImages = heroImage ? heroImage.split('\n').filter(url => url.trim() !== '') : [];
 
     return `---
 title: "${title}"
@@ -20,8 +19,7 @@ author: "${author}"
 status: "${status}"
 ${tableOfContents ? `tableOfContents: "${tableOfContents.replace(/"/g, '\'')}"` : ''}
 ${heroImages.length > 0 ? `heroImage:
-${heroImages.map(img => `  - "${img}"`).join('
-')}` : ''}
+${heroImages.map(img => `  - "${img}"`).join('\n')}` : ''}
 ---
 
 ${content}`;
@@ -104,4 +102,3 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
     return redirect(redirectURL);
 };
-'''
