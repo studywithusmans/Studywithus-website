@@ -631,3 +631,27 @@
 [debug] [2026-01-30T21:14:24.318Z] >>> [apiv2][query] GET https://firebaseapphosting.googleapis.com/v1beta/projects/studywithus-website-c2872/locations/asia-southeast1/backends/studywithuswebsite [none]
 [debug] [2026-01-30T21:14:24.632Z] <<< [apiv2][status] GET https://firebaseapphosting.googleapis.com/v1beta/projects/studywithus-website-c2872/locations/asia-southeast1/backends/studywithuswebsite 403
 [debug] [2026-01-30T21:14:24.632Z] <<< [apiv2][body] GET https://firebaseapphosting.googleapis.com/v1beta/projects/studywithus-website-c2872/locations/asia-southeast1/backends/studywithuswebsite {"error":{"code":403,"message":"Permission denied on resource project studywithus-website-c2872.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CONSUMER_INVALID","domain":"googleapis.com","metadata":{"containerInfo":"studywithus-website-c2872","service":"firebaseapphosting.googleapis.com","consumer":"projects/studywithus-website-c2872"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Permission denied on resource project studywithus-website-c2872."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console","url":"https://console.developers.google.com"}]}]}}
+[debug] [2026-01-30T21:23:14.158Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T21:23:14.163Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T21:23:14.164Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T21:23:14.167Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T21:23:14.167Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T21:23:14.168Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T21:23:14.173Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T21:23:14.173Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T21:23:14.173Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T21:23:14.181Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T21:23:14.181Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T21:23:14.182Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T21:23:14.185Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T21:23:14.187Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T21:23:24.027Z] No OAuth tokens found
+[debug] [2026-01-30T21:23:24.033Z] No OAuth tokens found
+[debug] [2026-01-30T21:23:24.034Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T21:23:24.034Z] No OAuth tokens found
+[debug] [2026-01-30T21:23:24.034Z] No OAuth tokens found
+[debug] [2026-01-30T21:23:24.034Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
