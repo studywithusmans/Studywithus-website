@@ -1,0 +1,242 @@
+[debug] [2026-01-30T20:36:23.591Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:23.605Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:23.606Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:23.611Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:23.612Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:23.612Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:23.615Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:23.616Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:23.616Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:23.618Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:23.618Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:23.619Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:23.621Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:23.622Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:23.626Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:23.627Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:23.627Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:23.627Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:23.627Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:23.628Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:23.628Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:23.628Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:23.628Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:23.629Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:23.631Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo [none]
+[debug] [2026-01-30T20:36:23.719Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo [none]
+[debug] [2026-01-30T20:36:24.810Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo 200
+[debug] [2026-01-30T20:36:24.810Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo {"name":"projects/studywithus-website-c2872/billingInfo","projectId":"studywithus-website-c2872","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-30T20:36:24.811Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:24.811Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:24.811Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-01-30T20:36:24.837Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.837Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.837Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:24.837Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:24.838Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.838Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.838Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:24.838Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:24.839Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.839Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.839Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:24.839Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:24.840Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.840Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.840Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:24.840Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:24.841Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.841Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.841Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:24.841Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:24.842Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.842Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.842Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:24.842Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:24.863Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.863Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:24.864Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:24.864Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:24.865Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/storage.googleapis.com [none]
+[debug] [2026-01-30T20:36:24.865Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/storage.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:24.868Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-30T20:36:24.868Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebasedataconnect.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:24.872Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/identitytoolkit.googleapis.com [none]
+[debug] [2026-01-30T20:36:24.873Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/identitytoolkit.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:24.877Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/fcm.googleapis.com [none]
+[debug] [2026-01-30T20:36:24.877Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/fcm.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:24.880Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-30T20:36:24.880Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/cloudfunctions.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:24.882Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseremoteconfig.googleapis.com [none]
+[debug] [2026-01-30T20:36:24.882Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseremoteconfig.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:24.884Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseio.com [none]
+[debug] [2026-01-30T20:36:24.884Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseio.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:25.002Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo 200
+[debug] [2026-01-30T20:36:25.002Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo {"name":"projects/studywithus-website-c2872/billingInfo","projectId":"studywithus-website-c2872","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-30T20:36:25.003Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:25.003Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:25.003Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-01-30T20:36:25.004Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.004Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.004Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:25.005Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:25.005Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.005Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.007Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:25.007Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:25.008Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.008Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.008Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:25.008Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:25.009Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.009Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.011Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:25.011Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:25.015Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.015Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.015Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:25.016Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:25.019Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.020Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.020Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:25.020Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:25.048Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.048Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.048Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:25.049Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:25.049Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/storage.googleapis.com [none]
+[debug] [2026-01-30T20:36:25.049Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/storage.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:25.053Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-30T20:36:25.053Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebasedataconnect.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:25.056Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/identitytoolkit.googleapis.com [none]
+[debug] [2026-01-30T20:36:25.056Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/identitytoolkit.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:25.058Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/fcm.googleapis.com [none]
+[debug] [2026-01-30T20:36:25.059Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/fcm.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:25.061Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-30T20:36:25.062Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/cloudfunctions.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:25.064Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseremoteconfig.googleapis.com [none]
+[debug] [2026-01-30T20:36:25.064Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseremoteconfig.googleapis.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:25.066Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseio.com [none]
+[debug] [2026-01-30T20:36:25.066Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseio.com  x-goog-user-project=studywithus-website-c2872
+[debug] [2026-01-30T20:36:25.851Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/storage.googleapis.com 403
+[debug] [2026-01-30T20:36:25.852Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/storage.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:25.885Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebasedataconnect.googleapis.com 403
+[debug] [2026-01-30T20:36:25.885Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:25.891Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/fcm.googleapis.com 403
+[debug] [2026-01-30T20:36:25.892Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/fcm.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:25.902Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseremoteconfig.googleapis.com 403
+[debug] [2026-01-30T20:36:25.902Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseremoteconfig.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:25.913Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/cloudfunctions.googleapis.com 403
+[debug] [2026-01-30T20:36:25.914Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:25.940Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseio.com 403
+[debug] [2026-01-30T20:36:25.940Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseio.com [omitted]
+[debug] [2026-01-30T20:36:25.941Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/identitytoolkit.googleapis.com 403
+[debug] [2026-01-30T20:36:25.941Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/identitytoolkit.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:25.950Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:25.951Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:25.951Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:25.959Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:25.959Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:25.960Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:25.966Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:25.967Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:25.967Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:25.969Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:25.970Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:25.970Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.970Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:25.970Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:25.971Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:25.971Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo [none]
+[debug] [2026-01-30T20:36:26.022Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/storage.googleapis.com 403
+[debug] [2026-01-30T20:36:26.023Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/storage.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:26.045Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/identitytoolkit.googleapis.com 403
+[debug] [2026-01-30T20:36:26.047Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/identitytoolkit.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:26.058Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/fcm.googleapis.com 403
+[debug] [2026-01-30T20:36:26.059Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/fcm.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:26.059Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseremoteconfig.googleapis.com 403
+[debug] [2026-01-30T20:36:26.060Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseremoteconfig.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:26.125Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseio.com 403
+[debug] [2026-01-30T20:36:26.125Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebaseio.com [omitted]
+[debug] [2026-01-30T20:36:26.133Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/cloudfunctions.googleapis.com 403
+[debug] [2026-01-30T20:36:26.134Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:26.140Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebasedataconnect.googleapis.com 403
+[debug] [2026-01-30T20:36:26.141Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/studywithus-website-c2872/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-30T20:36:26.200Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo 200
+[debug] [2026-01-30T20:36:26.200Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo {"name":"projects/studywithus-website-c2872/billingInfo","projectId":"studywithus-website-c2872","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-30T20:36:26.204Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.205Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.205Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-01-30T20:36:26.210Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.210Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.211Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:26.217Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:26.217Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:26.254Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.256Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.256Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:26.260Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.260Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.261Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:26.264Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.265Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.265Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:26.267Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:26.267Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:26.268Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:26.270Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:26.270Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:26.270Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:26.270Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo [none]
+[debug] [2026-01-30T20:36:26.280Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.280Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.280Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:26.283Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.283Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.283Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:26.284Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.284Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.284Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:26.285Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:26.285Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:26.286Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:26.286Z] No OAuth tokens found
+[debug] [2026-01-30T20:36:26.286Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:26.286Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:26.287Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo [none]
+[debug] [2026-01-30T20:36:26.489Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo 200
+[debug] [2026-01-30T20:36:26.489Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo {"name":"projects/studywithus-website-c2872/billingInfo","projectId":"studywithus-website-c2872","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-30T20:36:26.492Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.492Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.492Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-01-30T20:36:26.498Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:26.499Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:26.499Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:26.499Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:26.500Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-30T20:36:27.327Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo 200
+[debug] [2026-01-30T20:36:27.328Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-c2872/billingInfo {"name":"projects/studywithus-website-c2872/billingInfo","projectId":"studywithus-website-c2872","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-30T20:36:27.333Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:27.334Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:27.334Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-01-30T20:36:27.336Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"backendId"}
+[debug] [2026-01-30T20:36:27.337Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-30T20:36:27.337Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-30T20:36:27.341Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-30T20:36:27.341Z] > authorizing via signed-in user (studywithusmans@gmail.com)
