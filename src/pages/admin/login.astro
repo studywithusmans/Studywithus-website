@@ -23,13 +23,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <script>
-  // Use a try-catch block to handle potential initialization errors
-  try {
-    // Ensure the script runs after the DOM is fully loaded
-    document.addEventListener("DOMContentLoaded", () => {
-      const { initializeApp } = await import("firebase/app");
-      const { getAuth, signInWithEmailAndPassword } = await import("firebase/auth");
+  import { initializeApp } from "firebase/app";
+  import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById("login-form") as HTMLFormElement;
+    const errorMessage = document.getElementById("error-message") as HTMLParagraphElement;
+
+    try {
       const firebaseConfig = {
         apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY,
         authDomain: import.meta.env.PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -39,57 +40,50 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         appId: import.meta.env.PUBLIC_FIREBASE_APP_ID,
       };
 
-      // Log the config to see if variables are loaded
-      console.log("Firebase Config:", firebaseConfig);
-
       if (!firebaseConfig.apiKey) {
-        throw new Error("Firebase API Key is missing. Please check your .env file.");
+        throw new Error("Firebase config is missing. Please set PUBLIC_FIREBASE... variables in your environment.");
       }
 
       const app = initializeApp(firebaseConfig);
       const auth = getAuth(app);
 
-      const form = document.getElementById("login-form");
-      const errorMessage = document.getElementById("error-message");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+        const password = (form.elements.namedItem("password") as HTMLInputElement).value;
+        errorMessage.textContent = "";
 
-      if(form && errorMessage) {
-        form.addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const email = form.elements.email.value;
-          const password = form.elements.password.value;
-          errorMessage.textContent = "";
+        try {
+          const userCredential = await signInWithEmailAndPassword(auth, email, password);
+          const idToken = await userCredential.user.getIdToken();
 
-          try {
-            const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            const idToken = await userCredential.user.getIdToken();
+          const response = await fetch("/api/auth/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ idToken }),
+          });
 
-            const response = await fetch("/api/auth/login", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ idToken }),
-            });
-
-            if (response.ok) {
-              window.location.href = "/admin";
-            } else {
-              const errorText = await response.text();
-              errorMessage.textContent = `Login failed: ${errorText}`;
-            }
-          } catch (error) {
-            console.error("Firebase sign-in error:", error);
-            errorMessage.textContent = error.message || "An unknown error occurred during sign-in.";
+          if (response.ok) {
+            window.location.href = "/admin";
+          } else {
+            const errorText = await response.text();
+            errorMessage.textContent = `Login failed: ${errorText}`;
           }
-        });
+        } catch (error: any) {
+          console.error("Firebase auth error:", error);
+          errorMessage.textContent = error.message || "An unknown error occurred.";
+        }
+      });
+
+    } catch (e: any) {
+      console.error("Initialization Error:", e);
+      if (errorMessage) {
+        errorMessage.textContent = e.message;
       }
-    });
-  } catch (e) {
-    console.error("Critical Error on page load:", e);
-    const errorMessageElement = document.getElementById("error-message");
-    if (errorMessageElement) {
-      errorMessageElement.textContent = e.message;
     }
-  }
+  });
 </script>
+
 
 <style>
   /* Styles remain the same */
