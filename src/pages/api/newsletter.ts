@@ -6,7 +6,16 @@ const db = getFirestore(app);
 const newsletterCollection = collection(db, 'newsletter_subscriptions');
 
 export const POST: APIRoute = async ({ request }) => {
-  const { email } = await request.json();
+  let data;
+  try {
+    // Try to parse the JSON from the request body
+    data = await request.json();
+  } catch (error) {
+    // If parsing fails, it's a bad request (e.g., empty body)
+    return new Response('Invalid request body. Expected JSON.', { status: 400 });
+  }
+
+  const { email } = data;
 
   if (!email) {
     return new Response('Email is required', { status: 400 });
@@ -19,7 +28,7 @@ export const POST: APIRoute = async ({ request }) => {
     });
     return new Response('Successfully subscribed!', { status: 200 });
   } catch (error) {
-    console.error('Error adding document: ', error);
-    return new Response('Something went wrong', { status: 500 });
+    console.error('Error adding document to Firestore: ', error);
+    return new Response('Something went wrong on the server.', { status: 500 });
   }
 };
