@@ -279,3 +279,52 @@
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [debug] [2026-01-31T17:13:10.931Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
 [debug] [2026-01-31T17:13:10.936Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-31T17:34:34.830Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"ignore"}
+[debug] [2026-01-31T17:34:34.834Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-31T17:34:34.834Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-31T17:34:34.848Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"ignore"}
+[debug] [2026-01-31T17:34:34.849Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-31T17:34:34.849Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-31T17:34:34.853Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-31T17:34:34.854Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-31T17:34:34.856Z] No OAuth tokens found
+[debug] [2026-01-31T17:34:34.857Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-96b3a/billingInfo [none]
+[debug] [2026-01-31T17:34:35.948Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-96b3a/billingInfo 200
+[debug] [2026-01-31T17:34:35.948Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-96b3a/billingInfo {"name":"projects/studywithus-website-96b3a/billingInfo","projectId":"studywithus-website-96b3a","billingAccountName":"billingAccounts/01426D-BAD8BA-ED07F7","billingEnabled":true}
+[debug] [2026-01-31T17:34:35.949Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"ignore"}
+[debug] [2026-01-31T17:34:35.949Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-31T17:34:35.949Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-01-31T17:34:35.951Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"ignore"}
+[debug] [2026-01-31T17:34:35.951Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-31T17:34:35.951Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-31T17:34:35.952Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"ignore"}
+[debug] [2026-01-31T17:34:35.953Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-31T17:34:35.953Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-31T17:34:35.954Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-31T17:34:35.954Z] > authorizing via signed-in user (studywithusmans@gmail.com)
+[debug] [2026-01-31T17:34:35.954Z] No OAuth tokens found
+[debug] [2026-01-31T17:34:35.959Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-96b3a/billingInfo [none]
+[debug] [2026-01-31T17:34:36.191Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-96b3a/billingInfo 200
+[debug] [2026-01-31T17:34:36.192Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/studywithus-website-96b3a/billingInfo {"name":"projects/studywithus-website-96b3a/billingInfo","projectId":"studywithus-website-96b3a","billingAccountName":"billingAccounts/01426D-BAD8BA-ED07F7","billingEnabled":true}
+[debug] [2026-01-31T17:34:36.192Z] Object "/apphosting" in "firebase.json" is missing required property: {"missingProperty":"ignore"}
+[debug] [2026-01-31T17:34:36.192Z] Field "/apphosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-31T17:34:36.192Z] Field "/apphosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-01-31T17:34:36.194Z] No OAuth tokens found
+[debug] [2026-01-31T17:34:36.195Z] >>> [apiv2][query] POST https://identitytoolkit.googleapis.com/v1/projects/studywithus-website-96b3a/accounts:query [none]
+[debug] [2026-01-31T17:34:36.195Z] >>> [apiv2][body] POST https://identitytoolkit.googleapis.com/v1/projects/studywithus-website-96b3a/accounts:query {"expression":[{"userId":"SKmNOTC4h7fV1jKxPJL9xCeRy6Y2"}],"limit":"1"}
+[debug] [2026-01-31T17:34:36.482Z] <<< [apiv2][status] POST https://identitytoolkit.googleapis.com/v1/projects/studywithus-website-96b3a/accounts:query 200
+[debug] [2026-01-31T17:34:36.482Z] <<< [apiv2][body] POST https://identitytoolkit.googleapis.com/v1/projects/studywithus-website-96b3a/accounts:query {"recordsCount":"1","userInfo":[{"localId":"SKmNOTC4h7fV1jKxPJL9xCeRy6Y2","email":"studywithusmans@gmail.com","passwordHash":"UkVEQUNURUQ=","emailVerified":false,"passwordUpdatedAt":1769872357207,"providerUserInfo":[{"providerId":"password","federatedId":"studywithusmans@gmail.com","email":"studywithusmans@gmail.com","rawId":"studywithusmans@gmail.com"}],"validSince":"1769872357","disabled":false,"createdAt":"1769872357207"}]}
+[debug] [2026-01-31T17:34:36.483Z] No OAuth tokens found
+[debug] [2026-01-31T17:34:36.485Z] >>> [apiv2][query] POST https://identitytoolkit.googleapis.com/v1/accounts:update [none]
+[debug] [2026-01-31T17:34:36.485Z] >>> [apiv2][body] POST https://identitytoolkit.googleapis.com/v1/accounts:update {"customAttributes":"{\"admin\":true}","targetProjectId":"studywithus-website-96b3a","localId":"SKmNOTC4h7fV1jKxPJL9xCeRy6Y2"}
+[debug] [2026-01-31T17:34:36.859Z] <<< [apiv2][status] POST https://identitytoolkit.googleapis.com/v1/accounts:update 200
+[debug] [2026-01-31T17:34:36.860Z] <<< [apiv2][body] POST https://identitytoolkit.googleapis.com/v1/accounts:update {"kind":"identitytoolkit#SetAccountInfoResponse","localId":"SKmNOTC4h7fV1jKxPJL9xCeRy6Y2","email":"studywithusmans@gmail.com","providerUserInfo":[{"providerId":"password","federatedId":"studywithusmans@gmail.com","email":"studywithusmans@gmail.com","rawId":"studywithusmans@gmail.com"}],"passwordHash":"UkVEQUNURUQ=","emailVerified":false}
+[debug] [2026-01-31T17:34:36.860Z] No OAuth tokens found
+[debug] [2026-01-31T17:34:36.863Z] >>> [apiv2][query] POST https://identitytoolkit.googleapis.com/v1/projects/studywithus-website-96b3a/accounts:query [none]
+[debug] [2026-01-31T17:34:36.863Z] >>> [apiv2][body] POST https://identitytoolkit.googleapis.com/v1/projects/studywithus-website-96b3a/accounts:query {"expression":[{"userId":"SKmNOTC4h7fV1jKxPJL9xCeRy6Y2"}],"limit":"1"}
+[debug] [2026-01-31T17:34:37.078Z] <<< [apiv2][status] POST https://identitytoolkit.googleapis.com/v1/projects/studywithus-website-96b3a/accounts:query 200
+[debug] [2026-01-31T17:34:37.078Z] <<< [apiv2][body] POST https://identitytoolkit.googleapis.com/v1/projects/studywithus-website-96b3a/accounts:query {"recordsCount":"1","userInfo":[{"localId":"SKmNOTC4h7fV1jKxPJL9xCeRy6Y2","email":"studywithusmans@gmail.com","passwordHash":"UkVEQUNURUQ=","emailVerified":false,"passwordUpdatedAt":1769872357207,"providerUserInfo":[{"providerId":"password","federatedId":"studywithusmans@gmail.com","email":"studywithusmans@gmail.com","rawId":"studywithusmans@gmail.com"}],"validSince":"1769872357","disabled":false,"createdAt":"1769872357207","customAttributes":"{\"admin\":true}"}]}
