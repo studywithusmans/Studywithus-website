@@ -1216,3 +1216,15 @@
 [debug] [2026-01-31T09:30:30.849Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:810936350827:web:839a6de7afd0970a5e992e/config 403
 [debug] [2026-01-31T09:30:30.852Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:810936350827:web:839a6de7afd0970a5e992e/config {"error":{"code":403,"message":"com.google.api.tenant.error.TenantManagerException: Project '810936350827' not found or permission denied.","status":"PERMISSION_DENIED"}}
 [debug] [2026-01-31T09:30:30.852Z] Request to https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:810936350827:web:839a6de7afd0970a5e992e/config had HTTP Error: 403, com.google.api.tenant.error.TenantManagerException: Project '810936350827' not found or permission denied.
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-01-31T10:53:05.599Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-31T10:53:05.608Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-31T10:53:07.820Z] No OAuth tokens found
+[debug] [2026-01-31T10:53:07.822Z] No OAuth tokens found
+[debug] [2026-01-31T10:53:07.823Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-31T10:53:07.824Z] No OAuth tokens found
+[debug] [2026-01-31T10:53:07.825Z] No OAuth tokens found
+[debug] [2026-01-31T10:53:07.826Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]

@@ -15,30 +15,38 @@ const logoUrl = "https://i.postimg.cc/63QwKcn4/logo-(1).png";
     <div class="internal-links">
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
-      <!-- This will be dynamically replaced -->
-      <div id="admin-auth-link-container">
-        <HeaderLink href="/admin/login">Admin</HeaderLink>
-      </div>
+      <div id="admin-auth-link-container" class="auth-link-wrapper"></div>
     </div>
   </nav>
 </header>
 
 <script>
-  // This script runs on the client to dynamically change the Admin/Logout link
   document.addEventListener('DOMContentLoaded', () => {
     const adminAuthContainer = document.getElementById('admin-auth-link-container');
+    const pathname = window.location.pathname.replace(import.meta.env.BASE_URL, '');
 
-    // Function to check for the session cookie
-    const hasSessionCookie = () => {
-      return document.cookie.split(';').some((item) => item.trim().startsWith('session='));
+    const createLink = (href, text) => {
+        const link = document.createElement('a');
+        link.href = href;
+        link.textContent = text;
+        // Use the exact same class as HeaderLink for consistent styling
+        link.classList.add('header-nav-link'); 
+        
+        const subpath = pathname.match(/[^\/]+/g);
+        const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
+        if (isActive) {
+          link.classList.add('active');
+        }
+
+        return link.outerHTML;
     };
 
+    const hasSessionCookie = () => document.cookie.split(';').some((item) => item.trim().startsWith('session='));
+
     if (hasSessionCookie()) {
-      // If cookie exists, show Logout link
-      adminAuthContainer.innerHTML = '<a href="/api/auth/logout" class="header-link">Logout</a>';
+      adminAuthContainer.innerHTML = createLink("/api/auth/logout", "Logout");
     } else {
-      // If no cookie, show Admin login link
-      adminAuthContainer.innerHTML = '<a href="/admin/login" class="header-link">Admin</a>';
+      adminAuthContainer.innerHTML = createLink("/admin/login", "Admin");
     }
   });
 </script>
@@ -79,17 +87,23 @@ const logoUrl = "https://i.postimg.cc/63QwKcn4/logo-(1).png";
     display: flex;
     align-items: center;
   }
-  /* General link styling within the header */
-  .internal-links a,
-  .header-link /* Class for dynamically added links */
-  {
+  .auth-link-wrapper {
+      display: contents;
+  }
+
+  /* Single style rule for ALL navigation links */
+  :global(.header-nav-link) {
+    display: inline-block;
+		text-decoration: none;
     padding: 1em 0.5em;
     color: #121212;
     border-bottom: 4px solid transparent;
-    text-decoration: none;
   }
-  .internal-links a.active {
-    text-decoration: none;
+
+  :global(.header-nav-link.active), 
+  :global(.header-nav-link:hover) {
+		font-weight: bolder;
+		text-decoration: none;
     border-bottom-color: var(--accent);
-  }
+	}
 </style>
