@@ -56,6 +56,8 @@
   #success-message {
     display: none;
     color: green;
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 </style>
 <div id="newsletter-signup" role="complementary" aria-label="Newsletter Signup">
@@ -74,28 +76,48 @@
     </div>
     <button type="submit">Subscribe</button>
   </form>
-  <p id="success-message">Thanks! Check your email to confirm your subscription.</p>
+  <p id="success-message">Thank you for subscribing!</p>
   <p class="note">Weekly updates. Unsubscribe anytime.</p>
 </div>
 
 <script>
-  const form = document.getElementById("newsletter-form") as HTMLFormElement;
-  const successMessage = document.getElementById("success-message") as HTMLParagraphElement;
+  const form = document.getElementById("newsletter-form");
+  const successMessage = document.getElementById("success-message");
+  const emailInput = document.getElementById("email");
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const formData = new FormData(form);
-    const response = await fetch("/api/subscribe", {
-      method: "POST",
-      body: formData,
-    });
+    
+    const email = emailInput.value;
 
-    if (response.ok) {
-      form.style.display = "none";
-      successMessage.style.display = "block";
-    } else {
-      const error = await response.text();
-      alert(`Error: ${error}`);
+    if (!email) {
+      alert("Please enter your email.");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        form.style.display = "none";
+        const h2 = document.querySelector('#newsletter-signup h2');
+        const p = document.querySelector('#newsletter-signup p');
+        if(h2) h2.style.display = 'none';
+        if(p) p.style.display = 'none';
+        successMessage.style.display = "block";
+      } else {
+        const error = await response.text();
+        alert(`Error: ${error}`);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("An error occurred. Please try again.");
     }
   });
 </script>
