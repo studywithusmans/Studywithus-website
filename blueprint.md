@@ -23,10 +23,10 @@ This project is a static-first web application built with Astro.js, designed for
 
 ## Current Objective
 
-Fix a persistent login issue where users are stuck in a redirect loop, preventing access to the admin dashboard. The error is suspected to be in the authentication middleware logic.
+Fix a persistent login issue where users are unable to access the admin dashboard. The error is suspected to be in the client-side Firebase configuration.
 
 ### Action Plan
 
-1.  **Analyze Middleware:** Examine `src/middleware.ts` to identify the cause of the redirect loop.
-2.  **Correct Logic:** Modify the middleware to correctly handle invalid session cookies by deleting them and then redirecting to the login page.
-3.  **Verify Fix:** Confirm that the login process works as expected and the redirect loop is resolved.
+1.  **Analyze Client-side Firebase Configuration:** Examine `src/firebase/client.ts` to identify any potential misconfigurations.
+2.  **Correct Environment Variable:** Modify the `messagingSenderId` to use the correct environment variable.
+3.  **Verify Fix:** Confirm that the login process works as expected.
