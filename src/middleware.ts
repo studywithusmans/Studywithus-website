@@ -6,40 +6,51 @@ import { app } from "./firebase/server";
 const auth = getAuth(app);
 
 export const onRequest = defineMiddleware(async ({ cookies, redirect, url }, next) => {
+  console.log(`[Middleware] Processing request for: ${url.pathname}`);
+
   if (url.pathname.startsWith("/admin")) {
     const sessionCookie = cookies.get("session");
+    console.log("[Middleware] Admin route detected.");
 
     if (!sessionCookie) {
-      // If no cookie, and not on the login page, redirect to login.
+      console.log("[Middleware] No session cookie found.");
       if (url.pathname !== "/admin/login") {
+        console.log("[Middleware] Not on login page, redirecting to /admin/login.");
         return redirect("/admin/login");
       }
-      // Allow access to the login page.
+      console.log("[Middleware] On login page, allowing access.");
       return next();
     }
 
-    // We have a cookie, let's verify it.
+    console.log(`[Middleware] Session cookie found: ${sessionCookie.value.substring(0, 30)}...`);
+
     try {
+      console.log("[Middleware] Verifying session cookie...");
       await auth.verifySessionCookie(sessionCookie.value, true);
-      // User is authenticated.
-      // If they are trying to access the login page, redirect to the dashboard.
+      console.log("[Middleware] Session cookie is valid.");
+
       if (url.pathname === "/admin/login") {
+        console.log("[Middleware] User is authenticated and on login page, redirecting to /admin.");
         return redirect("/admin");
       }
-      // Otherwise, they can access the protected page.
+      
+      console.log("[Middleware] User is authenticated, allowing access to protected route.");
       return next();
     } catch (error) {
-      // Session cookie is invalid. Delete it.
+      console.error("[Middleware] Error verifying session cookie:", error.code, error.message);
       cookies.delete("session", { path: "/" });
-      // Redirect to login page if not already there.
+      console.log("[Middleware] Deleted invalid session cookie.");
+
       if (url.pathname !== "/admin/login") {
+        console.log("[Middleware] Redirecting to /admin/login due to invalid cookie.");
         return redirect("/admin/login");
       }
-      // Allow the request to proceed to display the login page.
+      
+      console.log("[Middleware] On login page with invalid cookie, allowing to re-login.");
       return next();
     }
   }
 
-  // Not an admin route, so just continue.
+  console.log("[Middleware] Not an admin route, proceeding.");
   return next();
 });
